@@ -53,6 +53,14 @@ body {
     --text-color: #000;
     --bg-color: #ffffff;
     --button-bg-color: #f9f9f9;
+
+    --bg-content-color: #FFFFFF;
+    --text-secondary: #818C99;
+    --separator-color: #3C3C431F;
+    --button-tertiary-bg-color: #818C991F;
+
+    --button-primary-bg-color: #45AEF5;
+    --button-primary-text-color: #ffffff;
   }
   a:hover {
     color: #747bff;
