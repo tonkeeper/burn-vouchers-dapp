@@ -1,4 +1,4 @@
-import {useCallback, useEffect, useMemo, useState} from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 import { useTonAddress, useTonConnectUI } from "@tonconnect/ui-react";
 import { Address, beginCell, toNano } from "@ton/core";
@@ -12,6 +12,7 @@ import logoUrl from "/logo.webp";
 import { List } from "./components/List/List.tsx";
 import { ButtonCell } from "./components/ButtonCell/ButtonCell.tsx";
 import { Loader } from "./components/Loader/Loader.tsx";
+import { showConfetti } from "./utils/confetti.ts";
 
 function App() {
   const [nfts, setNfts] = useState<NftItem[]>([]);
@@ -82,9 +83,13 @@ function App() {
     tonConnectUI.sendTransaction({
       validUntil: Math.floor(Date.now() / 1000) + 300,
       messages: messages,
+    }).then(() => {
+      showConfetti();
+      setNfts(nfts => nfts.filter(nft => !nftItems.includes(nft)));
+      setBurnCnt(1);
     });
 
-  }, [connectedAddress]);
+  }, [connectedAddress, nfts, burnCnt]);
 
   const totalValue = nfts
     .reduce(
