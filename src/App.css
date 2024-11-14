@@ -92,6 +92,7 @@ h2 {
   display: flex;
   align-items: center;
   transition: opacity 0.4s;
+  color: var(--text-color);
 }
 
 .button-cell .button.disabled {

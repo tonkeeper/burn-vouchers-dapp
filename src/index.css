@@ -51,7 +51,7 @@ body {
 @media (prefers-color-scheme: light) {
   :root {
     --text-color: #000;
-    --bg-color: #ffffff;
+    --bg-color: #EFEEF3;
     --button-bg-color: #f9f9f9;
 
     --bg-content-color: #FFFFFF;
