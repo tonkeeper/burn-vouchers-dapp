@@ -65,6 +65,10 @@ body {
   a:hover {
     color: #747bff;
   }
+
+  .button-cell .button {
+    filter: invert(1);
+  }
 }
 
 @keyframes rotate {
