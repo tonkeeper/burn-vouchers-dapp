@@ -4,5 +4,5 @@ import { nodePolyfills } from 'vite-plugin-node-polyfills'
 
 export default defineConfig({
   plugins: [nodePolyfills(),react()],
-  base: "/tonapi-dapp-example/"
+  base: "/burn-vouchers-dapp/"
 })
