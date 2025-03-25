@@ -75,7 +75,7 @@ function App() {
           .endCell()
           .toBoc()
           .toString('base64'),
-        amount: toNano('0.1').toString(),
+        amount: toNano('0.125').toString(),
         address: nftItem.address.toString(),
       };
     });
